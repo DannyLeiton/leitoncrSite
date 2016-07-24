@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="coderoasters">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,9 +19,9 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css" rel="stylesheet"  type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css" rel="stylesheet" type='text/css'>
     <!-- Theme CSS -->
-    <link href="css/agency.min.css" rel="stylesheet"  type='text/css'>
+    <link href="css/agency.min.css" rel="stylesheet" type='text/css'>
 
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -41,7 +42,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img class="img-responsive" style="max-height: 115px; margin-top: -45px; margin-left: -20px;" src="img/coder.png" alt="">
+                    <img class="img-responsive" style="max-height: 115px; margin-top: -40px; margin-left: -20px;" src="img/coder.png" alt="">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,8 +51,12 @@
                     <li>
                         <a class="page-scroll" href="#page-top">{{'HOME'|translate}}</a>
                     </li>
+
                     <li>
                         <a class="page-scroll" href="#about">{{'ABOUT'|translate}}</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">{{'TEAM'|translate}}</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">{{'SERVICES'|translate}}</a>
@@ -67,12 +72,12 @@
                         <a class="page-scroll" href="#team">{{'TEAM'|translate}}</a>
                     </li>-->
                     <li title="{{'CHANGELANG'|translate}}">
-                        <a style="cursor: pointer" data-ng-click="changeLanguage(language=='en'? 'es':'en')">{{'BUTTON_LANG_EN'|translate}}</a>
+                        <a class="bg-light-gray" style="cursor: pointer" data-ng-click="changeLanguage(language=='en'? 'es':'en')">{{'BUTTON_LANG_EN'|translate}}</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
+        </div>      
         <!-- /.container-fluid -->
     </nav>
     <!-- Header -->
@@ -86,8 +91,8 @@
             </div>
         </div>
     </header>
-   
-     
+
+
     <!-- About Section -->
     <section id="about">
         <div class="container">
@@ -127,7 +132,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
+                    <li>
                         <div class="timeline-image">
                             <img class="img-circle img-responsive" src="img/about/3.png" alt="">
                         </div>
@@ -150,7 +155,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
@@ -158,13 +163,13 @@
                     <div class="team-member">
                         <img src="img/team/1.jpg" class="img-responsive img-circle img-profile" alt="">
                         <h4>Daniel Leitón</h4>
-                        <p class="text-muted">Co-founder & Developer</p>
+                        <p class="text-muted">Full Stack Web Roaster</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://github.com/DannyLeiton" target="_blank"><i class="fa fa-github"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://facebook.com/dleiton" target="_blank"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://cr.linkedin.com/in/daniel-leitón-49025543" target="_blank"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -173,36 +178,36 @@
                     <div class="team-member">
                         <img src="img/team/2.jpg" class="img-responsive img-circle img-profile" alt="">
                         <h4>Edax Uclés</h4>
-                        <p class="text-muted">Co-founder & Developer</p>
+                        <p class="text-muted">Full Stack Web Roaster</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://github.com/f1lander" target="_blank"><i class="fa fa-github"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://facebook.com/filander.miyamoto" target="_blank"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/edax-ucles-aa597657" target="_blank"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
+                        <img src="img/team/3.jpg" class="img-responsive img-circle img-profile" alt="">
+                        <h4>Oscar Presidente</h4>
+                        <p class="text-muted">Mobile & Game Roaster</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://github.com/Struka9/" target="_blank"><i class="fa fa-github"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/rene89" target="_blank"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
+                            <!--<li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted"></p>
                 </div>
             </div>
         </div>
@@ -254,22 +259,22 @@
                     <h4 class="service-heading"></h4>
                 </div>
                 <div class="col-md-1">
-                    <i class="icon-javascript-alt" style="font-size:4em" alt="JavaScript"></i>                   
-                </div>                
-                <div class="col-md-1">
-                    <i class="icon-html" style="font-size:4em" alt="HTML5"></i>
+                    <i class="icon-javascript-alt" style="font-size:4em" title="JavaScript"></i>
                 </div>
                 <div class="col-md-1">
-                    <i class="icon-nodejs" style="font-size:4em" alt="NodeJS"></i>
+                    <i class="icon-html" style="font-size:4em" title="HTML5"></i>
                 </div>
                 <div class="col-md-1">
-                    <i class="icon-mongodb" style="font-size:4em" alt="MongoDB"></i>
+                    <i class="icon-nodejs" style="font-size:4em" title="NodeJS"></i>
                 </div>
                 <div class="col-md-1">
-                    <i class="fa fa-android" style="font-size:4em" alt="AndroidOS"></i>
+                    <i class="icon-mongodb" style="font-size:4em" title="MongoDB"></i>
                 </div>
                 <div class="col-md-1">
-                    <i class="icon-csharp" style="font-size:4em" alt="ASP.NET"></i>
+                    <i class="fa fa-android" style="font-size:4em" title="AndroidOS"></i>
+                </div>
+                <div class="col-md-1">
+                    <i class="icon-csharp" style="font-size:4em" title="ASP.NET Web API 2"></i>
                 </div>
             </div>
         </div>
@@ -319,7 +324,7 @@
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="container">
             <div class="row">
@@ -327,20 +332,21 @@
                     <span class="copyright"><img class="img-responsive" style="max-height: 100px;  margin-top: -3px; margin-left: -10px;" src="img/coder.png" alt=""> <!-- Copyright &copy; 2016 --> </span>
                 </div>
                 <div class="col-md-4">
-                <ul class="list-inline social-buttons">
+                    <ul class="list-inline social-buttons">
                         <!--<li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>-->
-                        <li><a href="#" title="(+506) 85193867"><i class="fa fa-phone"></i></a>
+                        <li><a href="tel:+506-851-938-67" title="(+506)85193867"><i class="fa fa-phone"></i></a>
                         </li>
-                        <li><a href="#" title="info@coderoasters.com"><i class="fa fa-envelope"></i></a>
+                        <li><a href="#contact" title="info@coderoasters.com"><i class="fa fa-envelope"></i></a>
                         </li>
-                        <li><a href="#" title="San José, Costa Rica"><i class="fa fa-map-marker"></i></a>
+                        <li><a target="_blank" href="https://www.google.es/maps/place/9%C2%B057'17.1%22N+84%C2%B013'47.3%22W/@9.9547498,-84.2319887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d9.9547498!4d-84.2298"
+                                title="San José, Costa Rica"><i class="fa fa-map-marker"></i></a>
                         </li>
-                </ul>
+                    </ul>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
@@ -451,8 +457,8 @@
         </div>
     </section-->
 
-   
-    
+
+
 
     <!-- Clients Aside 
     <aside class="clients">
@@ -663,7 +669,7 @@
     <script src="js/contact_me.js"></script>
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-     <!-- AngularJS -->
+    <!-- AngularJS -->
     <script src="js/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>

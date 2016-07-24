@@ -230,9 +230,6 @@ header {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  -webkit-filter: contrast(200%);
-  /* Chrome, Safari, Opera */
-  filter: contrast(200%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

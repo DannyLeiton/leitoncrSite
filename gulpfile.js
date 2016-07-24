@@ -6,6 +6,8 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var merge = require('merge-stream');
+var $ = require('gulp-load-plugins')();
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -100,3 +102,23 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
+
+//---------------------------------------------------------------------
+gulp.task('jshint', function() {
+  var jsFiles =  gulp.src('js/*.js')
+    .pipe(gulp.dest('dist/js'));
+  var vendorFiles = gulp.src('vendor/**/*.js').pipe(gulp.dest('dist/js')); 
+  return merge(jsFiles, vendorFiles);  
+});
+
+
+gulp.task('builddist', ['jshint'],
+  function() {
+  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+
+gulp.task('clean', require('del').bind(null, ['dist']));
+
+gulp.task('build', ['clean'], function () {
+    gulp.start('builddist');
+})
