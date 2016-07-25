@@ -1,4 +1,8 @@
 <?php
+date_default_timezone_set('Etc/UTC');
+
+require '../PHPMailer-master/PHPMailerAutoload.php';
+
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
@@ -14,13 +18,55 @@ $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
+
+//Create a new PHPMailer instance
+$mail = new PHPMailer;
+
+$mail->isSMTP();
+
+$mail->SMTPDebug = 2;
+
+$mail->Debugoutput = 'html';
+
+$mail->Host = 'smtp.gmail.com';
+
+$mail->Port = 587;
+
+$mail->SMTPSecure = 'tls';
+
+$mail->SMTPAuth = true;
+
+$mail->Username = "dleitonrivera@gmail.com";
+
+$mail->Password = "DaniEnGoogle2014!";
+
+//Set who the message is to be sent from
+$mail->setFrom('dleitonrivera@gmail.com', 'CodeRoasters');
+
+//Set an alternative reply-to address
+$mail->addReplyTo($email_address, $name);
+
+//Set who the message is to be sent to
+$mail->addAddress('dleitonrivera@gmail.com', 'CodeRoasters');
+$mail->addAddress('filanderuclez@gmail.com', 'CodeRoasters');
+
+//Set the subject line
+$mail->Subject = "Website Contact Form:  $name";
+
+//Read an HTML message body from an external file, convert referenced images to embedded,
+//convert HTML into a basic plain-text alternative body
+$mail->msgHTML("You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message");
+
+//Replace the plain text body with one created manually
+$mail->AltBody = 'This is a plain-text message body';
+
+//send the message, check for errors
+if (!$mail->send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+    return false;
+} else {
+    echo "Message sent!";
+    return true;
+}
    
-// Create the email and send the message
-$to = 'dleitonrivera@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
-mail($to,$email_subject,$email_body,$headers);
-return true;         
 ?>
