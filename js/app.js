@@ -101,7 +101,8 @@ app.config(function ($translateProvider) {
     CONTACT11: 'Por favor, ingrese su mensaje',
     CONTACT12: 'Enviar Mensaje'
 });
-  $translateProvider.preferredLanguage('en');
+var lg = localStorage.getItem('lan') || 'en';
+  $translateProvider.preferredLanguage(lg);
 });
 
 
@@ -112,9 +113,10 @@ app.controller('MainCtrl', function ($scope, $translate) {
     },1000);
       
     });
-  $scope.language = 'en';
+  $scope.language = localStorage.getItem('lan') || 'en';
   $scope.changeLanguage = function (key) {
     $scope.language = key;
+    localStorage.setItem('lan',$scope.language);
     $translate.use(key);
   };
 });
