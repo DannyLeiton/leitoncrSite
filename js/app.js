@@ -24,7 +24,8 @@ app.config(function ($translateProvider) {
     SERVICES2: 'What do we do?',
     PORTFOLIO: 'Portfolio',
     TEAM: 'Team',
-    TEAM2: 'Our Amazing Team',
+    OURTEAM:'Our Great Team',
+    OURTEAMSUB:'Let us give you the most exciting experience building your ideas!',
     SERVICESDESC: 'Some of our services are',
     WEBDEV: 'Web Development',    
     WEBDEVDESC: 'We make awesome websites and web applications with the latest technologies',
@@ -77,7 +78,8 @@ app.config(function ($translateProvider) {
     SERVICES2: '¿Qué hacemos?',
     PORTFOLIO: 'Portafolio',
     TEAM: 'Equipo',
-    TEAM2: 'Nuestro Equipo',
+    OURTEAM:'Nuestro Grandioso equipo',
+    OURTEAMSUB:'¡Déjenos darle la mejor experiencia construyendo sus ideas!',
     SERVICESDESC: 'Algunos de nuestros servicios son',
     WEBDEV: 'Desarrollo Web',    
     WEBDEVDESC: 'Hacemos portales Web Completos y Aplicaciones a la medida con tecnologías actuales',
@@ -104,6 +106,12 @@ app.config(function ($translateProvider) {
 
 
 app.controller('MainCtrl', function ($scope, $translate) {
+  angular.element(document).ready(function () {
+    setTimeout(function () {
+       $('#loading-div').fadeOut('slow');
+    },1000);
+      
+    });
   $scope.language = 'en';
   $scope.changeLanguage = function (key) {
     $scope.language = key;
