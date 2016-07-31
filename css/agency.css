@@ -559,6 +559,10 @@ aside.clients img {
   margin-top: -40px;
   margin-left: -20px;
 }
+.logo-bottom {
+  width: 150px;
+  height: 150px;
+}
 section#contact {
   background-color: #292929;
   background-image: url('../img/map-image.png');
