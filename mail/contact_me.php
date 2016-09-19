@@ -38,7 +38,7 @@ $mail->SMTPAuth = true;
 
 $mail->Username = "dleitonrivera@gmail.com";
 
-$mail->Password = "GugolDani2016+";
+$mail->Password = "GugoloDanilo2016++";
 
 //Set who the message is to be sent from
 $mail->setFrom('dleitonrivera@gmail.com', 'CodeRoasters');
@@ -48,7 +48,6 @@ $mail->addReplyTo($email_address, $name);
 
 //Set who the message is to be sent to
 $mail->addAddress('dleitonrivera@gmail.com', 'CodeRoasters');
-$mail->addAddress('filanderuclez@gmail.com', 'CodeRoasters');
 
 //Set the subject line
 $mail->Subject = "Website Contact Form:  $name";
