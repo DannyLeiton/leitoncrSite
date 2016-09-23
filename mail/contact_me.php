@@ -38,23 +38,25 @@ $mail->SMTPAuth = true;
 
 $mail->Username = "dleitonrivera@gmail.com";
 
-$mail->Password = "GugoloDanilo2016++";
+$mail->Password = "";
 
 //Set who the message is to be sent from
-$mail->setFrom('dleitonrivera@gmail.com', 'CodeRoasters');
+$mail->setFrom('dleitonrivera@gmail.com', 'Repuestos Leiton');
 
 //Set an alternative reply-to address
 $mail->addReplyTo($email_address, $name);
 
 //Set who the message is to be sent to
-$mail->addAddress('dleitonrivera@gmail.com', 'CodeRoasters');
+$mail->addAddress('dleitonrivera@gmail.com', 'Repuestos Leiton');
+$mail->addAddress('bernardo@leitoncr.com', 'Repuestos Leiton');
+$mail->addAddress('pableiton@gmail.com', 'Repuestos Leiton');
 
 //Set the subject line
-$mail->Subject = "Website Contact Form:  $name";
+$mail->Subject = "Repuestos Formulario Contacto:  $name";
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML("You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message");
+$mail->msgHTML("You have received a new message from your website contact form.\n\n"."De:\n\nNombre: $name\n\nCorreo: $email_address\n\nTeléfono: $phone\n\nMensaje:\n$message");
 
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';

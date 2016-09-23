@@ -1,39 +1,31 @@
-var app = angular.module('coderoasters',['pascalprecht.translate', 'ngMessages']);
+var app = angular.module('repuestosleiton',['pascalprecht.translate', 'ngMessages']);
 
 app.config(function ($translateProvider) {
   $translateProvider.translations('en', {    
     CHANGELANG: 'Cambiar a idioma Español',
     BUTTON_LANG_EN: 'ES',
     HOME: 'Home',
-    TITLE: 'CodeRoasters',
-    GREETINGS: 'We code your ideas!',
-    WELCOME2: "Let's Make Software",
+    TITLE: 'Leiton',
+    GREETINGS: "Here's the solution!",
+    WELCOME2: "Repuestos Leitón",
     TELLMEMORE: 'Know us',    
     ABOUT: 'About',
     ABOUT2: 'Who are we?',
-    ABOUT3: 'A TEAM OF DEVELOPERS',
-    ABOUT4: 'Senior Engineers',
-    ABOUT5: 'We are a small team of software engineers based in San José, Costa Rica',
-    ABOUT6: 'WITH GLOBAL VISION',
-    ABOUT7: 'Worldwide Collaboration',
-    ABOUT8: 'With the mission to collaborate with our talent to projects anywhere in the world',
-    ABOUT9: 'PRODUCT ORIENTED',
-    ABOUT10: 'Effective Development',
-    ABOUT11: 'Using an incremental development approach based on functional deliverables',
-    SERVICES: 'Services',
-    SERVICES2: 'What do we do?',
-    PORTFOLIO: 'Portfolio',
-    TEAM: 'Team',
-    OURTEAM:'Our Great Team',
-    OURTEAMSUB:'Let us give you the most exciting experience building your ideas!',
-    SERVICESDESC: 'Some of our services are',
-    WEBDEV: 'Web Development',    
-    WEBDEVDESC: 'We make awesome websites and web applications with the latest technologies',
-    MOBILEDEV:'Mobile Development',
-    MOBILEDEVDESC:"Imagine an App... We'll make it possible for Android and iOS",
-    GAMESDEV:'Video Games',
-    GAMESDEVDESC:"Who doesn't like videogames? It's time to have fun coding entertaining software",  
-    WEUSE:"We love using",
+    ABOUT3: 'A Family Company',
+    ABOUT4: 'Open to the public since 1992 in San José, Costa Rica',
+    ABOUT5: 'We are dedicated to sell engine parts for cars and trucks. Our main brands are:',
+    PRODUCTS: 'Products',
+    PRODUCTS2: 'What do we sell?',
+    PRODUCTSDESC: 'Our main products are',
+    MOTOR: 'Motor Internal Parts',    
+    MOTORDESC: 'Pistons, Piston Rings, Piston Liners, Valves, Oil, Water, Brake & Gasoline Pumps, Axial Shims, Bearings and Gaskets',
+    CLUTCH: 'Clutch Kits',
+    CLUTCHDESC: "Cluth Cover, Disc and Roll",
+    ACCESORIES: 'Accesories',
+    ACCESORIESDESC: "Coolant, wax, gauzes, brushes, polishers, bulbs, among others",  
+    BRANDS: "We have these brands of parts:",
+    LOCATION: "Location",
+    LOCATIONSUB: 'Get easily to our point of sale',
     CONTACT: 'Contact',
     CONTACT2: 'Contact us',
     CONTACT3: 'Tell us how we can help you',
@@ -45,49 +37,36 @@ app.config(function ($translateProvider) {
     CONTACT9: 'Please enter your phone number',
     CONTACT10: 'Your Message *',
     CONTACT11: 'Please enter a message',
-    CONTACT12: 'Send Message'
+    CONTACT12: 'Send Message',
+    EXPRESS: 'We have Express Delivery - Packages are sent all over Costa Rica',
+    BANK: 'Bank Account: 100 - 01 - 000 - 147585 - 4'
 });
-
-  /*
-   'We are a small team of software engineers 
-    based in San José, Costa Rica. 
-    We have the mission to collaborate with our talent to projects anywhere in the world. 
-    We use an incremental development approach based on functional deliverables.'
-  */
 
   $translateProvider.translations('es', {
     CHANGELANG: 'Switch to English Language',
     BUTTON_LANG_EN: 'EN',
     HOME: 'Inicio',
-    TITLE: 'CodeRoasters',
-    GREETINGS: 'Convertimos en software sus ideas',
-    WELCOME2: '¡Manos a la obra!',
+    TITLE: 'Repuestos Leitón',
+    GREETINGS: "¡Es la solución!",
+    WELCOME2: "Repuestos Leitón",
     TELLMEMORE: 'Conózcanos',
     ABOUT: '¿Quiénes somos?', 
     ABOUT2: '¿Quiénes somos?',
-    ABOUT3: 'UN EQUIPO DE PROGRAMADORES',
-    ABOUT4: 'Ingenieros Experimentados',
-    ABOUT5: 'Somos un pequeño equipo de ingenieros de software establecido en San José, Costa Rica',
-    ABOUT6: 'CON VISION GLOBAL',
-    ABOUT7: 'Colaborando en todo el mundo',
-    ABOUT8: 'Tenemos la misión de aportar nuestro talento a proyectos por implementar en cualquier parte del Mundo',
-    ABOUT9: 'ORIENTADOS AL PRODUCTO',
-    ABOUT10: 'Desarrollo Efectivo',
-    ABOUT11: 'Entregamos los productos funcionales de manera incremental', 
-    SERVICES: 'Servicios',
-    SERVICES2: '¿Qué hacemos?',
-    PORTFOLIO: 'Portafolio',
-    TEAM: 'Equipo',
-    OURTEAM:'Nuestro Grandioso equipo',
-    OURTEAMSUB:'¡Déjenos darle la mejor experiencia construyendo sus ideas!',
-    SERVICESDESC: 'Algunos de nuestros servicios son',
-    WEBDEV: 'Desarrollo Web',    
-    WEBDEVDESC: 'Hacemos portales Web Completos y Aplicaciones a la medida con tecnologías actuales',
-    MOBILEDEV:'Desarrollo para Móviles',
-    MOBILEDEVDESC:'La app que a usted se le ocurra, la hacemos posible para Android y iOS',
-    GAMESDEV:'Video Juegos',
-    GAMESDEVDESC:'¿A quién no le gustan los video juegos? Es tiempo de divertirse haciendo software para entretenimiento',
-    WEUSE:"Nos encanta Usar",
+    ABOUT3: 'UNA EMPRESA FAMILIAR',
+    ABOUT4: 'Abierta al público desde 1992 en San José, Costa Rica',
+    ABOUT5: 'Nos dedicamos a la venta de piezas internas de motor para automóviles y camiones. Nuestro amplio surtido en repuestos abarca marcas como:',
+    PRODUCTS: 'Productos',
+    PRODUCTS2: '¿Qué vendemos?',
+    PRODUCTSDESC: 'Algunos de nuestros productos son',
+    MOTOR: 'Partes Internas del Motor',    
+    MOTORDESC: 'Anillos de Pistón, Pistones, Camisas de Motor, Válvulas, Bombas de Aceite, de Agua, Gasolina y de Frenos, Calzas Axiales, Cojinetes de Bancada y Biela, Empaques de Motor y Fajas',
+    CLUTCH: 'Conjuntos de Clutch',
+    CLUTCHDESC:"Plato, Disco y Rol",
+    ACCESORIES:'Accesorios',
+    ACCESORIESDESC:"Coolant, ceras, gazas, escobillas, abrillantadores, bombillos, entre otros",  
+    BRANDS: "Trabajamos estas marcas de repuestos:",
+    LOCATION: "Ubicación",
+    LOCATIONSUB: 'Llegue fácilmente a nuestro punto de venta',
     CONTACT: 'Contacto',
     CONTACT2: 'Contáctenos',
     CONTACT3: 'Díganos cómo le podemos ayudar',
@@ -99,12 +78,13 @@ app.config(function ($translateProvider) {
     CONTACT9: 'Por favor, ingrese su número de teléfono',
     CONTACT10: 'Su mensaje *',
     CONTACT11: 'Por favor, ingrese su mensaje',
-    CONTACT12: 'Enviar Mensaje'
+    CONTACT12: 'Enviar Mensaje',
+    EXPRESS: 'Tenemos Servicio Express y de Encomienda a todo el País',
+    BANK: 'Cuenta Cliente: 100 - 01 - 000 - 147585 - 4'
 });
-var lg = localStorage.getItem('lan') || 'en';
+var lg = localStorage.getItem('lan') || 'es';
   $translateProvider.preferredLanguage(lg);
 });
-
 
 app.controller('MainCtrl', function ($scope, $translate) {
   angular.element(document).ready(function () {
@@ -113,7 +93,7 @@ app.controller('MainCtrl', function ($scope, $translate) {
     },1000);
       
     });
-  $scope.language = localStorage.getItem('lan') || 'en';
+  $scope.language = localStorage.getItem('lan') || 'es';
   $scope.changeLanguage = function (key) {
     $scope.language = key;
     localStorage.setItem('lan',$scope.language);

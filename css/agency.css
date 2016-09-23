@@ -148,7 +148,7 @@ fieldset[disabled] .btn-xl.active {
   background-color: white;
 }
 .navbar-custom {
-  background-color: #292929;
+  background-color: #00072a;
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
@@ -227,7 +227,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg3.jpg');
+  background-image: url('../img/movingEngine.gif');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
