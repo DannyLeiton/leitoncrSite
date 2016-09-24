@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Repuestos Leiton Motor Engine Parts">
     <meta name="author" content="Daniel Leiton">
-    <!--<meta property="og:image" content="http://coderoasters.com/img/coder.png" />-->
+    <meta property="og:image" content="http://leitoncr.com/img/header.jpg"/>
 
-    <title>Repuestos Leitón - Engine Parts</title>
+    <title>Leitón - Engine Parts</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,14 +29,16 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <style>
-      #map {
-        width: 100%;
-        height: 400px;
-      }
-    </style>
 </head>
 <body ng-controller="MainCtrl" id="page-top" class="index">
+    <div id="loading-div">
+        <img class="img-responsive" src="img/header.jpg" style="margin:auto; margin-top:5%; magin-bottom:0px; padding:0px;"/>
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -55,7 +57,6 @@
                     <li>
                         <a class="page-scroll" href="#page-top">{{'HOME'|translate}}</a>
                     </li>
-
                     <li>
                         <a class="page-scroll" href="#about">{{'ABOUT'|translate}}</a>
                     </li>
